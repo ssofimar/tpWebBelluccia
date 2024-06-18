@@ -1836,16 +1836,9 @@ section,
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
-.clients {
-  position: relative;
-  background: url(../img/fondoSeccionMarcas.png) no-repeat center center;
-  background-size: cover;
-  background-color: var(--nav-hover-color-custom);
-  margin-top: 50px;
-}
-
 .clients .swiper-slide img {
   transition: 0.3s;
+  opacity: 0.5;
 }
 
 .clients .swiper-slide img:hover {
@@ -1859,7 +1852,6 @@ section,
 .clients .swiper-pagination {
   margin-top: 20px;
   position: relative;
-  padding-bottom: 50px;
 }
 
 .clients .swiper-pagination .swiper-pagination-bullet {

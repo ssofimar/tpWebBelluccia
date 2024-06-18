@@ -6,7 +6,29 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function() {
+document.addEventListener('DOMContentLoaded', function () {
+  const aboutSection = document.querySelector('.about.section');
+  const filters = aboutSection.querySelectorAll('.about-filters li');
+  const contents = aboutSection.querySelectorAll('[data-filter-content]');
+
+  filters.forEach(function (filter) {
+    filter.addEventListener('click', function () {
+      aboutSection.querySelector('.about-filters .filter-active').classList.remove('filter-active');
+      this.classList.add('filter-active');
+      const filterValue = this.getAttribute('data-filter');
+
+      contents.forEach(function (content) {
+        if (content.getAttribute('data-filter-content') === filterValue) {
+          content.style.display = 'block';
+        } else {
+          content.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+
+(function () {
   "use strict";
 
   /**
@@ -50,7 +72,7 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       if (document.querySelector('.mobile-nav-active')) {
         e.preventDefault();
         this.parentNode.classList.toggle('active');
@@ -118,13 +140,13 @@
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+  document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
@@ -133,8 +155,8 @@
       });
     });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
+    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
+      filters.addEventListener('click', function () {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
         initIsotope.arrange({
@@ -152,7 +174,7 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll('.swiper').forEach(function(swiper) {
+    document.querySelectorAll('.swiper').forEach(function (swiper) {
       let config = JSON.parse(swiper.querySelector('.swiper-config').innerHTML.trim());
       new Swiper(swiper, config);
     });
@@ -162,7 +184,7 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
+  window.addEventListener('load', function (e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
