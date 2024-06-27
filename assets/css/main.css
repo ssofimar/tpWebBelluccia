@@ -11,10 +11,15 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Nunito", sans-serif;
   --nav-font: "Poppins", sans-serif;
+  --aclonica: "Aclonica", sans-serif;
+  --raleway: "Raleway", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -30,9 +35,6 @@
   --contrast-color: #ffffff;
   /* The contrast color is used for elements when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors */
 
-  --background-color-custom: #EF4222;
-  --heading-color-custom: #ffffff;
-  --accent-color-custom: #F3E7D8;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -48,12 +50,13 @@
   --nav-dropdown-hover-color: #4154f1;
   /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 
-  --nav-color-custom: #ffffff;
-  --nav-hover-color-custom: #F3E7D8;
-  --nav-dropdown-background-color-custom: #ffffff;
+  --blanco: #ffffff;
+  --letras-claras: #F3E7D8;
   --nav-dropdown-color-custom: #212529;
-  --nav-dropdown-hover-color-custom: #EF4222;
-  --btn-custom: #2F4320;
+  --rojo: #EF4222;
+  --verde: #2D421B;
+  --amarillo: #F3A632;
+  --letras-claras: #F3E7D8;
 }
 
 /* Smooth scroll */
@@ -66,18 +69,16 @@
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
-  background-color: var(--background-color-custom);
+  background-color: var(--letras-claras);
   font-family: var(--default-font);
 }
 
 a {
-  color: var(--accent-color-custom);
   text-decoration: none;
   transition: 0.3s;
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color-custom), transparent 25%);
   text-decoration: none;
 }
 
@@ -87,7 +88,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-color-custom);
   font-family: var(--heading-font);
 }
 
@@ -96,7 +96,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color-custom);
+  background-color: var(--amarillo);
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -115,7 +115,7 @@ h6 {
   font-size: 30px;
   margin: 0;
   font-weight: 700;
-  color: var(--heading-color);
+  color: var(--letras-claras);
 }
 
 .header .btn-getstarted,
@@ -191,7 +191,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color-custom);
+    color: var(--blanco);
     padding: 18px 12px;
     font-size: 15px;
     font-family: var(--nav-font);
@@ -218,13 +218,13 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color-custom);
+    color: var(--letras-claras);
   }
 
   .navmenu .dropdown ul {
     margin: 0;
     padding: 10px 0;
-    background: var(--nav-dropdown-background-color-custom);
+    background: var(--blanco);
     display: block;
     position: absolute;
     visibility: hidden;
@@ -255,7 +255,7 @@ h6 {
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color-custom);
+    color: var(--amarillo);
   }
 
   .navmenu .dropdown:hover>ul {
@@ -281,7 +281,7 @@ h6 {
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: var(--nav-color-custom);
+    color: var(--blanco);
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
@@ -301,7 +301,7 @@ h6 {
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
-    background-color: var(--nav-dropdown-background-color-custom);
+    background-color: var(--blanco);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -346,7 +346,7 @@ h6 {
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color-custom);
+    color: var(--amarillo);
   }
 
   .navmenu .active i,
@@ -442,7 +442,7 @@ h6 {
   .navmenu .listing-dropdown ul li a:hover,
   .navmenu .listing-dropdown ul li .active,
   .navmenu .listing-dropdown ul li .active:hover {
-    color: var(--nav-dropdown-hover-color-custom);
+    color: var(--amarillo);
     background-color: var(--nav-dropdown-background-color);
   }
 
@@ -482,7 +482,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color-custom);
+  background-color: var(--rojo);
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
@@ -605,8 +605,6 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background-color: color-mix(in srgb, var(--accent-color-custom), transparent 97%);
-  border: 1px solid color-mix(in srgb, var(--accent-color-custom), transparent 85%);
   font-size: 16px;
   color: #fff;
   margin-right: 10px;
@@ -615,7 +613,6 @@ h6 {
 
 .footer .social-links a:hover {
   color: var(--contrast-color);
-  background-color: var(--accent-color-custom);
 }
 
 .footer h4 {
@@ -626,7 +623,7 @@ h6 {
 }
 
 .footer p {
-  color: var(--nav-color-custom);
+  color: var(--blanco);
 }
 
 .footer .footer-links {
@@ -643,7 +640,6 @@ h6 {
   margin-right: 3px;
   font-size: 12px;
   line-height: 0;
-  color: var(--accent-color-custom);
 }
 
 .footer .footer-links ul li {
@@ -658,16 +654,15 @@ h6 {
 
 .footer .footer-links ul a {
   display: inline-block;
-  color: var(--nav-color-custom);
+  color: var(--blanco);
   line-height: 1;
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--nav-hover-color-custom);
+  color: var(--letras-claras);
 }
 
 .footer .footer-about a {
-  color: var(--heading-color-custom);
   font-size: 24px;
   font-weight: 600;
   font-family: var(--heading-font);
@@ -784,7 +779,6 @@ h6 {
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--accent-color-custom);
   padding: 60px 0;
   scroll-margin-top: 98px;
   overflow: clip;
@@ -810,22 +804,22 @@ section,
 .section-title h2 {
   font-size: 13px;
   letter-spacing: 1px;
-  font-weight: 700;
+  font-weight: 400;
   padding: 8px 20px;
   margin: 0;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
+  color: var(--verde);
   display: inline-block;
-  text-transform: uppercase;
   border-radius: 50px;
-  font-family: var(--default-font);
+  font-family: var(--aclonica);
 }
 
 .section-title p {
-  color: var(--heading-color);
+  color: var(--verde);
   margin: 10px 0 0 0;
-  font-size: 32px;
-  font-weight: 700;
+  font-family: var(--aclonica) !important;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: normal;
   font-family: var(--heading-font);
 }
 
@@ -843,29 +837,33 @@ section,
   padding: 80px 0 60px 0;
   display: flex;
   align-items: center;
-  background: url(../img/hero-bg.png) top center no-repeat;
+  background: url(../img/fondoHero.jpg) top center no-repeat;
   background-size: cover;
 }
 
 .hero h1 {
-  color: var(--btn-custom);
+  color:  var(--verde);
+  font-family: var(--aclonica);
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 50px;
   line-height: 56px;
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color:  var(--verde);
+  font-family: var(--raleway);
+  font-optical-sizing: auto;
+  font-weight: 500;
   margin: 5px 0 30px 0;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 25px;
 }
 
 .hero .btn-get-started {
   border-radius: 100px;
-  color: var(--contrast-color);
-  background:  var(--btn-custom);
+  color:var(--letras-claras);
+  background: var(--amarillo);
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 16px;
@@ -886,8 +884,8 @@ section,
 
 .hero .btn-get-started:hover {
   color: var(--contrast-color);
-  background: color-mix(in srgb,  var(--btn-custom), transparent 15%);
-  box-shadow: 0 8px 28px color-mix(in srgb, var(--btn-custom), transparent 55%);
+  background: color-mix(in srgb,  var(--amarillo), transparent 15%);
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--amarillo), transparent 55%);
 }
 
 .hero .btn-get-started:hover i {
@@ -1049,9 +1047,9 @@ section,
 --------------------------------------------------------------*/
 .values .card {
   background-color: var(--background-color);
-  color: var(--default-color);
+  color: var(--verde);
   padding: 30px;
-  box-shadow: 0px 0 10px color-mix(in srgb, var(--default-color), transparent 92%);
+  /* box-shadow: 0px 0 10px color-mix(in srgb, var(--verde), transparent 92%); */
   text-align: center;
   transition: 0.3s;
   height: 100%;
@@ -1065,13 +1063,19 @@ section,
 }
 
 .values .card h3 {
+  font-family: var(--aclonica) !important;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 18px;
 }
 
+.values .card p {
+  font-family: var(--raleway) !important;
+  font-weight: 500;
+}
+
 .values .card:hover {
-  box-shadow: 0px 0 30px color-mix(in srgb, var(--default-color), transparent 88%);
+  /* box-shadow: 0px 0 30px color-mix(in srgb, var(--default-color), transparent 88%); */
 }
 
 .values .card:hover img {
@@ -1147,6 +1151,8 @@ section,
 }
 
 .alt-features .icon-box h4 {
+  color: var(--rojo);
+  font-family: var(--raleway) !important;
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 10px 0;
@@ -1155,13 +1161,15 @@ section,
 .alt-features .icon-box i {
   font-size: 44px;
   line-height: 44px;
-  color: var(--accent-color);
+  color: var(--rojo);
   margin-right: 15px;
 }
 
 .alt-features .icon-box p {
+  color: var(--verde);
+  font-family: var(--raleway) !important;
+  font-weight: 500;
   font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin-bottom: 0;
 }
 
@@ -1321,14 +1329,127 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Animate Section
+--------------------------------------------------------------*/
+.animate {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0 60px 0;
+  display: flex;
+  align-items: center;
+}
+
+.animate h1 {
+  color:  var(--verde);
+  font-family: var(--aclonica);
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  font-size: 40px;
+  line-height: 56px;
+  padding-bottom: 50px;
+}
+
+.animate h2 {
+  font-size: 24px;
+  color:  var(--rojo);
+  font-family: var(--raleway);
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.animate p {
+  color:  var(--verde);
+  font-family: var(--raleway);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  margin: 5px 0 30px 0;
+  font-size: 20px;
+}
+
+ .btn-get-started {
+  border-radius: 100px;
+  color:var(--letras-claras);
+  background: var(--amarillo);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 40px;
+  transition: 0.5s;
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--accent-color), transparent 80%);
+}
+
+.animate .btn-get-started i {
+  margin-left: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.animate .btn-get-started:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb,  var(--amarillo), transparent 15%);
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--amarillo), transparent 55%);
+}
+
+.animate .btn-get-started:hover i {
+  transform: translateX(5px);
+}
+
+.animate .btn-watch-video {
+  font-size: 16px;
+  transition: 0.5s;
+  color: var(--default-color);
+  font-weight: 600;
+}
+
+.animate .btn-watch-video i {
+  color: var(--accent-color);
+  font-size: 32px;
+  transition: 0.3s;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.animate .btn-watch-video:hover {
+  color: var(--accent-color);
+}
+
+.animate .btn-watch-video:hover i {
+  color: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+.animate .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (max-width: 640px) {
+  .animate h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .animate p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
 .pricing {
-  background-color: var(--nav-color-custom);
+  background-color: var(--blanco);
   position: relative;
   background: url(../img/fondoSeccionCursos.png) no-repeat center center;
   background-size: cover;
   padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .pricing .pricing-tem {
@@ -1351,27 +1472,45 @@ section,
   }
 }
 
-.pricing h3 {
-  font-weight: 700;
-  font-size: 18px;
+.pricing h2 {
+  color: var(--letras-claras);
+  font-size: 30px;
   margin-bottom: 15px;
+}
+
+.pricing h3 {
+  font-family: var(--aclonica);
+  color: var(--rojo);
+  font-size: 30px;
+  margin: 0;
+}
+
+.pricing h4 {
+  font-family: var(--raleway);
+  color: var(--verde);
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .pricing .price {
   font-size: 36px;
-  color: var(--heading-color);
-  font-weight: 600;
-  font-family: var(--heading-font);
+  font-weight: 400;
+  color: var(--rojo);
+  font-family: var(--aclonica);
 }
 
 .pricing .price sup {
+  font-family: var(--aclonica);
+  font-weight: 400;
+  color: var(--rojo);
   font-size: 20px;
   top: -15px;
   left: -3px;
 }
 
 .pricing .price span {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: var(--verde);
+  font-family: var(--aclonica);
   font-size: 16px;
   font-weight: 300;
 }
@@ -1395,31 +1534,43 @@ section,
 }
 
 .pricing ul li {
+  font-size: 20px;
+  color: var(--verde);
+  font-family: var(--raleway);
+  font-weight: 500;
   padding-bottom: 10px;
 }
 
 .pricing ul .na {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-  text-decoration: line-through;
+  font-size: 20px;
+  color: var(--rojo);
+  font-family: var(--raleway);
+  font-weight: 700;
+  padding-bottom: 20px;
 }
 
 .pricing .btn-buy {
+  border-radius: 100px;
+  color:var(--letras-claras);
+  background: var(--amarillo);
+  font-family: var(--raleway);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--amarillo), transparent 80%);
   display: inline-block;
   padding: 8px 40px 10px 40px;
-  border-radius: 50px;
-  color: var(--accent-color);
   transition: none;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: var(--heading-font);
-  font-weight: 600;
   transition: 0.3s;
-  border: 1px solid var(--accent-color);
 }
 
 .pricing .btn-buy:hover {
-  background: var(--accent-color);
   color: var(--contrast-color);
+  background: color-mix(in srgb,  var(--amarillo), transparent 15%);
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--amarillo), transparent 55%);
 }
 
 .pricing .featured {
@@ -1439,7 +1590,7 @@ section,
 # Faq Section
 --------------------------------------------------------------*/
 .faq {
-  background-color: var(--nav-hover-color-custom);
+  background-color: var(--letras-claras);
   width: 100%;
   position: relative;
   padding: 80px 0 60px 0;
@@ -1840,8 +1991,7 @@ section,
   position: relative;
   background: url(../img/fondoSeccionMarcas.png) no-repeat center center;
   background-size: cover;
-  background-color: var(--nav-hover-color-custom);
-  margin-top: 50px;
+  background-color: var(--letras-claras);
 }
 
 .clients .swiper-slide img {
@@ -1866,11 +2016,11 @@ section,
   width: 12px;
   height: 12px;
   opacity: 1;
-  background-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  background-color: color-mix(in srgb, var(--amarillo), transparent 80%);
 }
 
 .clients .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
+  background-color: var(--amarillo);
 }
 
 /*--------------------------------------------------------------
@@ -1956,16 +2106,16 @@ section,
   font-size: 14px;
   position: relative;
   background: url(../img/seccionDescuento.png) no-repeat center center;
-  background-color: var(--nav-hover-color-custom);
+  background-color: var(--letras-claras);
 }
 
 .discount .discount-newsletter {
-  background-color: var(--nav-hover-color-custom);
+  background-color: var(--letras-claras);
   width: 100%;
   position: relative;
   padding: 80px 0 60px 0;
   background-size: cover;
-  background-color: color-mix(in srgb, var(--nav-hover-color-custom), transparent 97%);
+  background-color: color-mix(in srgb, var(--letras-claras), transparent 97%);
 }
 
 .discount .discount-newsletter h4 {
@@ -1973,7 +2123,7 @@ section,
 }
 
 .discount button {
-  background:  var(--btn-custom);
+  background:  var(--verde);
   color: var(--contrast-color);
   border: 0;
   padding: 10px 30px;
@@ -2002,14 +2152,14 @@ section,
 .contact .info-item i {
   font-size: 38px;
   line-height: 0;
-  color: var(--background-color-custom);
+  color: var(--rojo);
 }
 
 .contact .info-item h3 {
   font-size: 20px;
   font-weight: 700;
   margin: 20px 0 10px 0;
-  color: var(--background-color-custom);
+  color: var(--rojo);
 }
 
 .contact .info-item p {
@@ -2021,7 +2171,7 @@ section,
 
 .contact .php-email-form {
   background: url(../img/seccionContacto.png) no-repeat center center;
-  background-color: var(--nav-hover-color-custom);
+  background-color: var(--letras-claras);
   width: 100%;
   position: relative;
   background-size: contain;
@@ -2091,7 +2241,7 @@ section,
 .contact .php-email-form input[type=text]:focus,
 .contact .php-email-form input[type=email]:focus,
 .contact .php-email-form textarea:focus {
-  border-color: var(--background-color-custom);
+  border-color: var(--rojo);
 }
 
 .contact .php-email-form input[type=text]::placeholder,
@@ -2101,7 +2251,7 @@ section,
 }
 
 .contact .php-email-form button[type=submit] {
-  background:  var(--btn-custom);
+  background:  var(--verde);
   color: var(--contrast-color);
   border: 0;
   padding: 10px 30px;
@@ -2110,12 +2260,11 @@ section,
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb,  var(--btn-custom), transparent 20%);
+  background: color-mix(in srgb,  var(--verde), transparent 20%);
 }
 
 .contact .php-email-form input.form-control,
 .contact .php-email-form textarea.form-control {
-  background-color: var(--accent-color-custom);
 }
 
 
