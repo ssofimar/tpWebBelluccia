@@ -867,7 +867,7 @@ section,
   font-size: 25px;
 }
 
-.hero .btn-get-started {
+.btn-get-started {
   border-radius: 100px;
   color: var(--letras-claras);
   background: var(--amarillo);
@@ -883,13 +883,13 @@ section,
   box-shadow: 0 8px 28px color-mix(in srgb, var(--amarillo), transparent 80%);
 }
 
-.hero .btn-get-started i {
+.btn-get-started i {
   margin-left: 5px;
   font-size: 18px;
   transition: 0.3s;
 }
 
-.hero .btn-get-started:hover {
+.btn-get-started:hover {
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--amarillo), transparent 15%);
   box-shadow: 0 8px 28px color-mix(in srgb, var(--amarillo), transparent 55%);
@@ -1640,13 +1640,12 @@ section,
   transition: 0.3s;
 }
 
-.pricing .btn-buy:hover {
-  color: var(--amarillo);
-  background: color-mix(in srgb, var(--letras-claras), transparent 15%);
+.btn-buy:hover {
+  background: color-mix(in srgb, var(--contrast-color), transparent 15%);
   box-shadow: 0 8px 28px color-mix(in srgb, var(--amarillo), transparent 55%);
 }
 
-.pricing .featured {
+.featured {
   width: 200px;
   position: absolute;
   top: 18px;
