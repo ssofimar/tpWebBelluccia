@@ -5,11 +5,26 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-
 document.addEventListener('DOMContentLoaded', function () {
   const aboutSection = document.querySelector('.about.section');
   const filters = aboutSection.querySelectorAll('.about-filters li');
   const contents = aboutSection.querySelectorAll('[data-filter-content]');
+  const line = document.querySelector('.filters-line-active');
+
+  function updateLinePosition(filter) {
+    const filterRect = filter.getBoundingClientRect();
+    const containerRect = aboutSection.querySelector('.about-filters').getBoundingClientRect();
+    const filterWidth = filterRect.width;
+    const filterLeft = filterRect.left - containerRect.left;
+    line.style.width = `${filterWidth}px`;
+    line.style.left = `${filterLeft}px`;
+  }
+
+  // Inicialmente ajusta la posición de la línea activa
+  const activeFilter = aboutSection.querySelector('.about-filters .filter-active');
+  if (activeFilter) {
+    updateLinePosition(activeFilter);
+  }
 
   filters.forEach(function (filter) {
     filter.addEventListener('click', function () {
@@ -24,9 +39,13 @@ document.addEventListener('DOMContentLoaded', function () {
           content.style.display = 'none';
         }
       });
+
+      // Actualiza la posición de la línea activa
+      updateLinePosition(this);
     });
   });
 });
+
 
 (function () {
   "use strict";

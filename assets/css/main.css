@@ -193,10 +193,10 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
+    font-family: var(--raleway);
     color: var(--letras-claras);
     padding: 18px 12px;
     font-size: 18px;
-    font-family: var(--nav-font);
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -709,7 +709,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background-color: var(--amarillo);
+  background-color: var(--rojo);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -723,7 +723,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--amarillo), transparent 20%);
+  background-color: color-mix(in srgb, var(--rojo), transparent 20%);
   color: var(--letras-claras);
 }
 
@@ -866,7 +866,7 @@ section,
   font-family: var(--raleway);
   font-optical-sizing: auto;
   font-weight: 500;
-  margin: 5px 0 30px 0;
+  margin: 10px 0 30px 0;
   font-size: 28px;
 }
 
@@ -937,7 +937,7 @@ section,
   }
 
   .hero .container {
-    padding: 60px 30px;
+    padding: 100px 30px;
     text-align: center;
   }
 
@@ -970,9 +970,9 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about {
+/* .about {
   margin-bottom: 100px;
-}
+} */
 
 .about .content {
   padding: 40px;
@@ -1030,7 +1030,6 @@ section,
 
 .about .about-filters {
   padding: 0;
-  margin: 0 auto 30px auto;
   list-style: none;
   text-align: start;
 }
@@ -1047,7 +1046,7 @@ section,
   line-height: 1;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
-
+  position: relative;
 }
 
 .about .about-filters li:hover,
@@ -1081,22 +1080,88 @@ section,
     font-size: 28px;
   }
 
-  .about .content p{
+  .about .content p {
     font-size: 18px;
   }
 
-  .btn-get-started{
-    font-size: 16px!important;
+  .btn-get-started {
+    font-size: 16px !important;
+  }
+
+  .filters-line {
+    margin-top: 5px;
+    margin-bottom: 20px;
   }
 }
 
-.content div {
+.content div.textos {
   display: none;
 }
 
-/* Mostrar el primer contenido por defecto cuando no hay ningún filtro aplicado */
 .content div[data-default] {
   display: block;
+}
+
+.filters-line {
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 0, 0, 0.5);
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.filters-line-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  height: 3px;
+  background: rgba(255, 0, 0, 1);
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Inicialmente la línea activa tiene el ancho del primer filtro */
+.filters-line-active {
+  width: 0;
+}
+
+.about .about-filters {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: start;
+}
+
+.about .about-filters li {
+  color: var(--verde);
+  font-family: var(--raleway);
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+  margin: 0 10px;
+  line-height: 1;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.about .about-filters li.filter-active {
+  font-weight: 700;
+}
+
+/* Para dispositivos móviles */
+@media (max-width: 575px) {
+  .filters-line {
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  .about .about-filters li {
+    font-size: 16px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1145,6 +1210,9 @@ section,
 }
 
 .values .card img {
+  height: 260px;
+  object-fit: contain;
+  width: 100%;
   padding: 0 50px 30px 50px;
   transition: 0.5s;
   transform: scale(1.1);
@@ -1174,20 +1242,20 @@ section,
 }
 
 @media (max-width: 640px) {
-  .values{
+  .values {
     margin-bottom: 0;
   }
 
-  .recorte-arriba{
+  .recorte-arriba {
     margin-bottom: -50px;
   }
 
-  .recorte-abajo{
+  .recorte-abajo {
     margin-top: -50px;
   }
 
-  .text-row{
-    display:inline !important;
+  .text-row {
+    display: inline !important;
   }
 
   .values .section-title p {
@@ -1199,7 +1267,9 @@ section,
     font-size: 26px;
     margin-left: 10px;
   }
-  .values .card h3, .values .card p {
+
+  .values .card h3,
+  .values .card p {
     font-size: 18px;
   }
 }
@@ -1319,11 +1389,11 @@ section,
     font-size: 28px;
   }
 
-  .alt-features .icon-box h4{
+  .alt-features .icon-box h4 {
     font-size: 18px;
   }
 
-  .alt-features .icon-box p{
+  .alt-features .icon-box p {
     font-size: 17px;
   }
 
@@ -1703,7 +1773,7 @@ section,
   list-style: none;
   color: var(--default-color);
   text-align: center;
-  line-height: 26px;
+  line-height: 20px;
   font-size: 16px;
   margin-bottom: 25px;
 }
@@ -1735,7 +1805,8 @@ section,
 }
 
 .btn-buy:hover {
-  background: color-mix(in srgb, var(--contrast-color), transparent 15%);
+  background: var(--rojo);
+  color: var(--letras-claras);
   box-shadow: 0 8px 28px color-mix(in srgb, var(--rojo), transparent 55%);
 }
 
@@ -1777,7 +1848,8 @@ section,
     padding-bottom: 100px;
   }
 
-  .pricing h2, .pricing .price {
+  .pricing h2,
+  .pricing .price {
     font-size: 28px;
   }
 
@@ -1789,7 +1861,7 @@ section,
     font-size: 20px;
   }
 
-  .btn-buy{
+  .btn-buy {
     font-size: 15px;
   }
 }
@@ -1890,7 +1962,7 @@ section,
 }
 
 @media (max-width: 575px) {
-  .faq{
+  .faq {
     margin-bottom: 100px;
   }
 
@@ -1898,7 +1970,7 @@ section,
     font-size: 28px;
   }
 
-  .faq .faq-container .faq-item h3{
+  .faq .faq-container .faq-item h3 {
     font-size: 18px;
   }
 }
@@ -1978,7 +2050,7 @@ section,
     padding: 8px 70px !important;
   }
 
-  .portfolio .section-title p{
+  .portfolio .section-title p {
     font-size: 28px;
   }
 }
@@ -1991,6 +2063,9 @@ section,
 .portfolio .portfolio-content img {
   transition: 0.3s;
   border-radius: 40px;
+  height: 236px;
+  object-fit: cover;
+  width: 100%;
 }
 
 .portfolio .portfolio-content .portfolio-info {
@@ -2173,7 +2248,7 @@ section,
 
 @media (max-width: 640px) {
 
-  .testimonials{
+  .testimonials {
     margin-bottom: 100px;
   }
 
@@ -2185,7 +2260,7 @@ section,
     font-size: 28px;
   }
 
-  .testimonials h2{
+  .testimonials h2 {
     font-size: 26px;
   }
 }
@@ -2292,8 +2367,8 @@ section,
 # Clients Section
 --------------------------------------------------------------*/
 .clients {
-  background-color: var(--naranja);
-  margin-bottom: 200px;
+  background-color: var(--letras-claras);
+  margin-bottom: 160px;
 }
 
 .clients.section {
@@ -2301,15 +2376,26 @@ section,
 }
 
 .clients .swiper p {
-  color: var(--letras-claras);
+  color: var(--verde);
   font-family: var(--amaranth);
   font-weight: 700;
   font-size: 40px;
   margin-bottom: 30px;
 }
 
+.clients .swiper-slide {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .clients .swiper-slide img {
+  max-height: 100%;
+  max-width: 100%;
   transition: 0.3s;
+  opacity: 0.7;
+  object-fit: contain;
 }
 
 .clients .swiper-slide img:hover {
@@ -2330,7 +2416,7 @@ section,
   height: 12px;
   opacity: 1;
   border: 1px solid var(--rojo);
-  background-color: var(--blanco);
+  background-color: transparent;
 }
 
 .clients .swiper-pagination .swiper-pagination-bullet-active {
@@ -2439,22 +2525,23 @@ section,
   background-color: var(--letras-claras);
   width: 100%;
   position: relative;
-  padding: 80px 0 60px 0;
+  padding: 60px 0;
   background-size: cover;
   background-color: color-mix(in srgb, var(--letras-claras), transparent 97%);
 }
 
 .discount p {
   font-family: var(--amaranth);
-  color: var(--verde);
+  color: var(--letras-claras);
   font-weight: 700;
   font-size: 40px;
   margin-left: 0;
+  margin-bottom: 0;
 }
 
 .discount .btn-get-started {
   padding: 6px 45px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .text-row {
@@ -2469,7 +2556,7 @@ section,
 }
 
 @media (max-width: 640px) {
-  .discount{
+  .discount {
     margin-bottom: 100px;
   }
 
@@ -2512,11 +2599,11 @@ section,
   position: relative;
   background: url(../img/fondoSeccionFrase.png) no-repeat center center;
   background-color: var(--letras-claras);
-  background-size: contain;
+  background-size: 60% auto;
   margin-bottom: 200px;
 }
 
-#frase .text-row {
+.frase .text-row {
   padding: 50px 0;
 }
 
@@ -2548,8 +2635,9 @@ section,
   }
 
   .frase {
+    background: url(../img/Recurso\ 209seccion\ frase\ mobile.png) no-repeat center center;
     margin-bottom: 100px;
-    background-size: cover;
+    background-size: 95% auto;
   }
 }
 
@@ -2576,6 +2664,7 @@ section,
     transform: rotate(360deg);
   }
 }
+
 
 
 /*--------------------------------------------------------------
@@ -2646,8 +2735,12 @@ section,
     margin: 0 50px;
   }
 
-  .contact .section-title p{
+  .contact .section-title p {
     font-size: 28px;
+  }
+
+  .contact .info-item {
+    padding: 45px;
   }
 }
 
