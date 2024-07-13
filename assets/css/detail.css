@@ -563,8 +563,8 @@ h6 {
 }
 
 .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--rojo), transparent 15%);
+  color: var(--rojo);
+  background: var(--letras-claras);
   box-shadow: 0 8px 28px color-mix(in srgb, var(--rojo), transparent 55%);
 }
 
@@ -860,7 +860,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 100vh;
+  min-height: 110vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -940,8 +940,8 @@ section,
 }
 
 .btn-get-started:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--rojo), transparent 15%);
+  color: var(--rojo);
+  background: var(--letras-claras);
   box-shadow: 0 8px 28px color-mix(in srgb, var(--rojo), transparent 55%);
 }
 
@@ -1017,9 +1017,9 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-/* .about {
-  margin-bottom: 100px;
-} */
+.about {
+  margin-bottom: 170px;
+}
 
 .about .content {
   padding: 40px;
@@ -1037,15 +1037,22 @@ section,
   font-family: var(--amaranth);
   font-weight: 700;
   font-size: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .about .content p {
   color: var(--verde);
   font-family: var(--raleway);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
-  margin: 15px 0 30px 0;
+  margin: 0 0 20px 0;
+}
+
+.about .img p {
+  color: var(--verde);
+  font-family: var(--raleway);
+  font-weight: 700;
+  font-size: 17px;
 }
 
 .about .content .btn-read-more {
@@ -1117,6 +1124,7 @@ section,
 
   .about {
     padding-top: 0;
+    margin-bottom: 100px;
   }
 
   .about .btn-get-started {
@@ -1772,12 +1780,6 @@ section,
   transition: 0.3s;
 }
 
-.animate .btn-get-started:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--rojo), transparent 15%);
-  box-shadow: 0 8px 28px color-mix(in srgb, var(--rojo), transparent 55%);
-}
-
 .animate .btn-get-started:hover i {
   transform: translateX(5px);
 }
@@ -1934,11 +1936,16 @@ section,
 }
 
 .pricing ul li {
-  font-size: 21px;
+  font-size: 20px;
   color: var(--verde);
   font-family: var(--raleway);
   font-weight: 500;
   padding-bottom: 8px;
+}
+
+.pricing ul li.textoCurso {
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .btn-buy {
@@ -2480,18 +2487,6 @@ section,
   overflow: hidden;
 }
 
-.team .team-member .member-img:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  background: url(../img/team-shape.svg) no-repeat center bottom;
-  background-size: contain;
-  z-index: 1;
-}
-
 .team .team-member .social {
   position: absolute;
   right: -100%;
@@ -2677,7 +2672,7 @@ section,
   position: relative;
   background: url(../img/seccionDescuento.png) no-repeat center center;
   background-color: var(--letras-claras);
-  margin-bottom: 200px;
+  margin-bottom: 150px;
   padding: 70px 0;
 }
 
