@@ -258,7 +258,7 @@ h6 {
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
-    color: var(--amarillo);
+    color: var(--naranja);
   }
 
   .navmenu .dropdown:hover>ul {
@@ -349,7 +349,7 @@ h6 {
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--amarillo);
+    color: var(--naranja);
   }
 
   .navmenu .active i,
@@ -445,7 +445,7 @@ h6 {
   .navmenu .listing-dropdown ul li a:hover,
   .navmenu .listing-dropdown ul li .active,
   .navmenu .listing-dropdown ul li .active:hover {
-    color: var(--amarillo);
+    color: var(--naranja);
     background-color: var(--nav-dropdown-background-color);
   }
 
@@ -485,6 +485,12 @@ h6 {
 --------------------------------------------------------------*/
 .fondoFooter {
   width: 100%;
+  display: block;
+}
+
+.fondoFooterMobile {
+  width: 100%;
+  display: none;
 }
 
 .footer {
@@ -592,6 +598,16 @@ h6 {
   border: 3px solid var(--accent-color);
   border-top-color: var(--background-color);
   animation: subscription-loading 1s linear infinite;
+}
+
+@media (max-width: 640px) {
+  .fondoFooterMobile {
+    display: block;
+  }
+
+  .fondoFooter {
+    display: none;
+  }
 }
 
 @keyframes subscription-loading {
@@ -937,7 +953,7 @@ section,
   }
 
   .hero .container {
-    padding: 100px 30px;
+    padding: 150px 30px 0 30px;
     text-align: center;
   }
 
@@ -946,7 +962,7 @@ section,
   }
 
   .hero h1 {
-    font-size: 28px;
+    font-size: 33px;
     line-height: 36px;
   }
 
@@ -1076,6 +1092,10 @@ section,
     margin: 0 30px;
   }
 
+  .about .content {
+    padding-top: 0;
+  }
+
   .about .content h2 {
     font-size: 28px;
   }
@@ -1162,6 +1182,10 @@ section,
   .about .about-filters li {
     font-size: 16px;
   }
+
+  .about .img-fluid {
+    margin-top: -50px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1246,6 +1270,14 @@ section,
     margin-bottom: 0;
   }
 
+  .values .card {
+    padding: 0 30px;
+  }
+
+  .values .text-row {
+    display: inline !important;
+  }
+
   .recorte-arriba {
     margin-bottom: -50px;
   }
@@ -1254,13 +1286,12 @@ section,
     margin-top: -50px;
   }
 
-  .text-row {
+  /* .text-row {
     display: inline !important;
-  }
+  } */
 
   .values .section-title p {
     font-size: 28px;
-    margin-bottom: 5px;
   }
 
   .values .section-title h4 {
@@ -1272,9 +1303,9 @@ section,
   .values .card p {
     font-size: 18px;
   }
-  
-  .section-title{
-    padding-bottom: 15px;
+
+  .section-title {
+    padding-bottom: 50px;
   }
 }
 
@@ -1386,7 +1417,7 @@ section,
 @media (max-width: 640px) {
   .alt-features {
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   .alt-features .section-title p {
@@ -1666,7 +1697,8 @@ section,
   }
 
   .animate {
-    margin-top: 150px;
+    margin-top: 50px;
+    padding-bottom: 100px;
   }
 
   .animate .btn-get-started {
@@ -1786,7 +1818,7 @@ section,
 }
 
 .pricing ul li.textoCurso {
-  margin-bottom: 20px;
+  margin: 0 35px 20px 35px;
   font-size: 18px;
 }
 
@@ -1828,7 +1860,6 @@ section,
 }
 
 @media (max-width: 640px) {
-
   .pricing .icon {
     padding: 0;
   }
@@ -1850,7 +1881,7 @@ section,
   }
 
   .pricing {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 100px;
   }
 
@@ -2090,7 +2121,7 @@ section,
   font-weight: 400;
   color: var(--letras-claras);
   display: inline-block;
-  background-color: var(--amarillo);
+  background-color: var(--naranja);
 }
 
 .portfolio .portfolio-content .portfolio-info p {
@@ -2118,7 +2149,7 @@ section,
 
 .portfolio .portfolio-content .portfolio-info .preview-link:hover,
 .portfolio .portfolio-content .portfolio-info .details-link:hover {
-  color: var(--amarillo);
+  color: var(--naranja);
 }
 
 .portfolio .portfolio-content .portfolio-info .details-link {
@@ -2142,6 +2173,10 @@ section,
   margin-bottom: 200px;
 }
 
+.testimonials .profile {
+  margin-top: 30px;
+}
+
 .testimonials h2 {
   font-family: var(--aclonica);
   font-weight: 400;
@@ -2160,7 +2195,6 @@ section,
 }
 
 .testimonials .testimonial-item {
-  /* box-shadow: 0px 0 20px color-mix(in srgb, var(--default-color), transparent 90%); */
   background: url(../img/seccionComunidadPrograma.png) no-repeat center center;
   background-size: contain;
   background-origin: border-box;
@@ -2168,6 +2202,7 @@ section,
   box-sizing: content-box;
   position: relative;
   padding: 30px;
+  padding-top: 60px;
   margin: 40px 30px;
   min-height: 320px;
   display: flex;
@@ -2244,7 +2279,7 @@ section,
   }
 
   .testimonials .swiper-pagination {
-    margin-top: 0;
+    margin-top: 20px;
   }
 
   .testimonials .testimonial-item {
@@ -2268,6 +2303,7 @@ section,
 
   .testimonials h2 {
     font-size: 26px;
+    margin-bottom: 5px;
   }
 }
 
@@ -2631,8 +2667,12 @@ section,
 }
 
 @media (max-width: 575px) {
+  .frase .frase-newsletter{
+    margin-top: -90px;
+  }
+
   .frase .frase-newsletter h4 {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .frase .text-row {
@@ -2642,7 +2682,7 @@ section,
 
   .frase {
     background: url(../img/Recurso\ 209seccion\ frase\ mobile.png) no-repeat center center;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     background-size: 95% auto;
   }
 }

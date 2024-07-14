@@ -258,7 +258,7 @@ h6 {
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
-    color: var(--amarillo);
+    color: var(--naranja);
   }
 
   .navmenu .dropdown:hover>ul {
@@ -349,7 +349,7 @@ h6 {
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--amarillo);
+    color: var(--naranja);
   }
 
   .navmenu .active i,
@@ -445,7 +445,7 @@ h6 {
   .navmenu .listing-dropdown ul li a:hover,
   .navmenu .listing-dropdown ul li .active,
   .navmenu .listing-dropdown ul li .active:hover {
-    color: var(--amarillo);
+    color: var(--naranja);
     background-color: var(--nav-dropdown-background-color);
   }
 
@@ -487,6 +487,23 @@ h6 {
   padding-top: 100px;
   width: 100%;
   background-color: var(--letras-claras);
+  display: block;
+}
+
+.fondoFooterMobile {
+  padding-top: 100px;
+  width: 100%;
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .fondoFooterMobile {
+    display: block;
+  }
+
+  .fondoFooter {
+    display: none;
+  }
 }
 
 .footer {
@@ -552,7 +569,7 @@ h6 {
   background: var(--rojo);
   font-family: var(--heading-font);
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 1px;
   display: flex;
   align-items: center;
@@ -608,6 +625,16 @@ h6 {
   border: 3px solid var(--accent-color);
   border-top-color: var(--background-color);
   animation: subscription-loading 1s linear infinite;
+}
+
+@media (max-width: 640px) {
+  .footer .footer-newsletter h4 {
+    font-size: 28px;
+  }
+
+  .footer .footer-newsletter p {
+    font-size: 18px;
+  }
 }
 
 @keyframes subscription-loading {
@@ -993,7 +1020,7 @@ section,
   }
 
   .hero h1 {
-    font-size: 28px;
+    font-size: 33px;
     line-height: 36px;
   }
 
@@ -1001,6 +1028,10 @@ section,
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+  }
+
+  .hero h2 {
+    font-size: 21px;
   }
 }
 
@@ -1123,7 +1154,7 @@ section,
   }
 
   .about {
-    padding-top: 0;
+    padding-top: 60px;
     margin-bottom: 100px;
   }
 
@@ -1299,6 +1330,11 @@ section,
 @media (max-width: 640px) {
   .values {
     margin-bottom: 0;
+    padding-top: 100px;
+  }
+
+  .values .card {
+    padding: 0 30px;
   }
 
   .recorte-arriba {
@@ -1307,15 +1343,15 @@ section,
 
   .recorte-abajo {
     margin-top: -50px;
+    margin-bottom: 50px;
   }
 
-  .text-row {
+  /* .text-row {
     display: inline !important;
-  }
+  } */
 
   .values .section-title p {
     font-size: 28px;
-    margin-bottom: 5px;
   }
 
   .values .section-title h4 {
@@ -1373,6 +1409,9 @@ section,
 }
 
 @media (max-width: 768px) {
+  .stats {
+    padding-bottom: 100px;
+  }
 
   .stats .section-title p {
     font-size: 28px;
@@ -1714,6 +1753,11 @@ section,
     font-size: 17px;
   }
 
+  .services {
+    padding-top: 50px;
+    margin-bottom: 0;
+  }
+
 }
 
 /*--------------------------------------------------------------
@@ -1824,7 +1868,8 @@ section,
   }
 
   .animate {
-    margin-top: 150px;
+    margin-top: 50px;
+    padding-bottom: 110px;
   }
 
   .animate .btn-get-started {
@@ -1944,7 +1989,7 @@ section,
 }
 
 .pricing ul li.textoCurso {
-  margin-bottom: 20px;
+  margin: 0 35px 20px 35px;
   font-size: 18px;
 }
 
@@ -2006,7 +2051,7 @@ section,
   }
 
   .pricing {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 100px;
   }
 
@@ -2298,6 +2343,10 @@ section,
   margin-bottom: 200px;
 }
 
+.testimonials .profile {
+  margin-top: 30px;
+}
+
 .testimonials h2 {
   font-family: var(--aclonica);
   font-weight: 400;
@@ -2324,6 +2373,7 @@ section,
   box-sizing: content-box;
   position: relative;
   padding: 30px;
+  padding-top: 60px;
   margin: 40px 30px;
   min-height: 320px;
   display: flex;
@@ -2400,7 +2450,7 @@ section,
   }
 
   .testimonials .swiper-pagination {
-    margin-top: 0;
+    margin-top: 20px;
   }
 
   .testimonials .testimonial-item {
@@ -2437,7 +2487,7 @@ section,
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
-.team{
+.team {
   padding-top: 100px;
   background-color: var(--verde);
   padding-bottom: 150px;
@@ -2450,7 +2500,7 @@ section,
   color: var(--letras-claras);
 }
 
-.team .team-member .member-info h4{
+.team .team-member .member-info h4 {
   font-family: var(--raleway) !important;
   font-size: 21px;
   font-weight: 700;
@@ -2458,7 +2508,7 @@ section,
   margin-bottom: 5px;
 }
 
-.team .team-member .member-info span{
+.team .team-member .member-info span {
   font-family: var(--raleway) !important;
   font-size: 14px;
   font-weight: 400;
@@ -2467,7 +2517,7 @@ section,
 
 }
 
-.team .team-member .member-info p{
+.team .team-member .member-info p {
   font-family: var(--raleway) !important;
   font-size: 18px;
   font-weight: 400;
@@ -2526,6 +2576,17 @@ section,
 .team .team-member:hover .social {
   right: 8px;
   opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .team .section-title p {
+    font-size: 28px !important;
+  }
+
+  .team {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
 }
 
 /*--------------------------------------------------------------
