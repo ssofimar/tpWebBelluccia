@@ -486,11 +486,11 @@ h6 {
 .fondoFooter {
   padding-top: 100px;
   width: 100%;
-  background-color: var(--letras-claras);
   display: block;
 }
 
 .fondoFooterMobile {
+  background-color: var(--letras-claras);
   padding-top: 100px;
   width: 100%;
   display: none;
@@ -499,6 +499,7 @@ h6 {
 @media (max-width: 640px) {
   .fondoFooterMobile {
     display: block;
+    margin-bottom: -5px;
   }
 
   .fondoFooter {
@@ -517,26 +518,26 @@ h6 {
   color: var(--letras-claras);
 }
 
-.footer .footer-newsletter {
+.footer-newsletter {
   background-color: var(--letras-claras);
   padding: 50px 0;
 }
 
-.footer .footer-newsletter h4 {
+.footer-newsletter h4 {
   font-family: var(--amaranth) !important;
   font-size: 40px;
   font-weight: 700;
   color: var(--verde);
 }
 
-.footer .footer-newsletter p {
+.footer-newsletter p {
   font-family: var(--raleway) !important;
   font-size: 21px;
   font-weight: 400;
   color: var(--verde);
 }
 
-.footer .footer-newsletter .newsletter-form {
+.footer-newsletter .newsletter-form {
   margin-top: 30px;
   padding: 6px 8px;
   position: relative;
@@ -546,11 +547,11 @@ h6 {
   border-radius: 4px;
 }
 
-.footer .footer-newsletter .newsletter-form:focus-within {
+.footer-newsletter .newsletter-form:focus-within {
   border-color: var(--accent-color);
 }
 
-.footer .footer-newsletter .newsletter-form input[type=email] {
+.footer-newsletter .newsletter-form input[type=email] {
   border: 0;
   padding: 4px;
   width: 100%;
@@ -558,11 +559,11 @@ h6 {
   color: var(--default-color);
 }
 
-.footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
+.footer-newsletter .newsletter-form input[type=email]:focus-visible {
   outline: none;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit] {
+.footer-newsletter .newsletter-form input[type=submit] {
   border: 0;
   border-radius: 100px;
   color: var(--letras-claras);
@@ -579,13 +580,13 @@ h6 {
   box-shadow: 0 8px 28px color-mix(in srgb, var(--rojo), transparent 80%);
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit]:hover {
+.footer-newsletter .newsletter-form input[type=submit]:hover {
   color: var(--rojo);
   background: var(--letras-claras);
   box-shadow: 0 8px 28px color-mix(in srgb, var(--rojo), transparent 55%);
 }
 
-.footer .footer-newsletter .error-message {
+.footer-newsletter .error-message {
   display: none;
   background: #df1529;
   color: #ffffff;
@@ -596,7 +597,7 @@ h6 {
   border-radius: 4px;
 }
 
-.footer .footer-newsletter .sent-message {
+.footer-newsletter .sent-message {
   display: none;
   color: #ffffff;
   background: #059652;
@@ -607,7 +608,7 @@ h6 {
   border-radius: 4px;
 }
 
-.footer .footer-newsletter .loading {
+.footer-newsletter .loading {
   display: none;
   background: var(--background-color);
   text-align: center;
@@ -615,7 +616,7 @@ h6 {
   margin-top: 10px;
 }
 
-.footer .footer-newsletter .loading:before {
+.footer-newsletter .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;

@@ -603,6 +603,7 @@ h6 {
 @media (max-width: 640px) {
   .fondoFooterMobile {
     display: block;
+    margin-bottom: -5px;
   }
 
   .fondoFooter {
